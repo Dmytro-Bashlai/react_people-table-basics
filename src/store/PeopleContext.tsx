@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Person } from '../types';
 import { getPeople } from '../api';
+import { Notification } from '../types/Notification';
 
 interface Props {
   children: React.ReactNode;
-}
-
-enum Notification {
-  Initial = '',
-  LoadingError = 'Something went wrong',
-  NoPeople = 'There are no people on the server',
 }
 
 export const UsersContext = React.createContext({

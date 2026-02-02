@@ -2,12 +2,7 @@ import { Loader } from './Loader';
 import { useContext } from 'react';
 import { UsersContext } from '../store/PeopleContext';
 import { PersonLink } from './PersonLink';
-
-enum Notification {
-  Initial = '',
-  LoadingError = 'Something went wrong',
-  NoPeople = 'There are no people on the server',
-}
+import { Notification } from '../types/Notification';
 
 export const PeopleTable = () => {
   const { people, message, loading } = useContext(UsersContext);
